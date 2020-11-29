@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://umanasoap/webservice" targetNamespace="http://umanasoap/webservice" elementFormDefault="qualified">
+
+    <xs:element name="getCandidateRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" />
+            </xs:sequence>
+        </xs:complexType>        
+    </xs:element>
+
+    <xs:element name="getCandidateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="candidate" type="tns:candidate" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="candidate">
+        <xs:all>
+            <xs:element name="id" type="xs:long" />
+            <xs:element name="firstName" type="xs:string" />
+            <xs:element name="lastName" type="xs:string" />
+            <xs:element name="emailAddress" type="xs:string" />
+        </xs:all>
+    </xs:complexType>
+
+</xs:schema>
