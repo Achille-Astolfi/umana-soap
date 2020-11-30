@@ -5,7 +5,7 @@
             <xs:sequence>
                 <xs:element name="id" type="xs:long" />
             </xs:sequence>
-        </xs:complexType>        
+        </xs:complexType>
     </xs:element>
 
     <xs:element name="getCandidateResponse">
@@ -22,6 +22,51 @@
             <xs:element name="firstName" type="xs:string" />
             <xs:element name="lastName" type="xs:string" />
             <xs:element name="emailAddress" type="xs:string" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="getCourseRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCourseResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="course" type="tns:course" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCourseListRequest">
+        <!-- senza elementi -->
+    </xs:element>
+
+    <xs:element name="getCourseListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="courses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="course" maxOccurs="unbounded" type="tns:course" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- do un name al complexType come suggerimento d'uso quando devo usare la struttura
+             all'interno di un altro elemento -->
+    <xs:complexType name="course">
+        <!-- Una prima cosa che si può fare: sostituire sequence con all -->
+        <xs:all>
+            <!-- id è un tipo numerico -->
+            <xs:element name="id" type="xs:long" />
+            <xs:element name="description" type="xs:string" />
         </xs:all>
     </xs:complexType>
 

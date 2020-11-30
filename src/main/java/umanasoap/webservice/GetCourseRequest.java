@@ -10,7 +10,6 @@ package umanasoap.webservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="candidate" type="{http://umanasoap/webservice}candidate"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "candidate"
+    "id"
 })
-@XmlRootElement(name = "getCandidateResponse")
-public class GetCandidateResponse {
+@XmlRootElement(name = "getCourseRequest")
+public class GetCourseRequest {
 
-    @XmlElement(required = true)
-    protected Candidate candidate;
+    protected long id;
 
     /**
-     * Recupera il valore della proprietà candidate.
+     * Recupera il valore della proprietà id.
      * 
-     * @return
-     *     possible object is
-     *     {@link Candidate }
-     *     
      */
-    public Candidate getCandidate() {
-        return candidate;
+    public long getId() {
+        return id;
     }
 
     /**
-     * Imposta il valore della proprietà candidate.
+     * Imposta il valore della proprietà id.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Candidate }
-     *     
      */
-    public void setCandidate(Candidate value) {
-        this.candidate = value;
+    public void setId(long value) {
+        this.id = value;
     }
 
 }

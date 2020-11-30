@@ -11,22 +11,22 @@ package umanasoap.webservice;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per anonymous complex type.
+ * <p>Classe Java per course complex type.
  * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
- * &lt;complexType&gt;
+ * &lt;complexType name="course"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="candidate" type="{http://umanasoap/webservice}candidate"/&gt;
- *       &lt;/sequence&gt;
+ *       &lt;all&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/all&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
@@ -35,37 +35,53 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "candidate"
-})
-@XmlRootElement(name = "getCandidateResponse")
-public class GetCandidateResponse {
+@XmlType(name = "course", propOrder = {
 
+})
+public class Course {
+
+    protected long id;
     @XmlElement(required = true)
-    protected Candidate candidate;
+    protected String description;
 
     /**
-     * Recupera il valore della proprietà candidate.
+     * Recupera il valore della proprietà id.
      * 
-     * @return
-     *     possible object is
-     *     {@link Candidate }
-     *     
      */
-    public Candidate getCandidate() {
-        return candidate;
+    public long getId() {
+        return id;
     }
 
     /**
-     * Imposta il valore della proprietà candidate.
+     * Imposta il valore della proprietà id.
+     * 
+     */
+    public void setId(long value) {
+        this.id = value;
+    }
+
+    /**
+     * Recupera il valore della proprietà description.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Imposta il valore della proprietà description.
      * 
      * @param value
      *     allowed object is
-     *     {@link Candidate }
+     *     {@link String }
      *     
      */
-    public void setCandidate(Candidate value) {
-        this.candidate = value;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
 }

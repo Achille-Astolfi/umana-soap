@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="candidate" type="{http://umanasoap/webservice}candidate"/&gt;
+ *         &lt;element name="course" type="{http://umanasoap/webservice}course"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "candidate"
+    "course"
 })
-@XmlRootElement(name = "getCandidateResponse")
-public class GetCandidateResponse {
+@XmlRootElement(name = "getCourseResponse")
+public class GetCourseResponse {
 
     @XmlElement(required = true)
-    protected Candidate candidate;
+    protected Course course;
 
     /**
-     * Recupera il valore della proprietà candidate.
+     * Recupera il valore della proprietà course.
      * 
      * @return
      *     possible object is
-     *     {@link Candidate }
+     *     {@link Course }
      *     
      */
-    public Candidate getCandidate() {
-        return candidate;
+    public Course getCourse() {
+        return course;
     }
 
     /**
-     * Imposta il valore della proprietà candidate.
+     * Imposta il valore della proprietà course.
      * 
      * @param value
      *     allowed object is
-     *     {@link Candidate }
+     *     {@link Course }
      *     
      */
-    public void setCandidate(Candidate value) {
-        this.candidate = value;
+    public void setCourse(Course value) {
+        this.course = value;
     }
 
 }

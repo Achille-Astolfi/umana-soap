@@ -2,13 +2,16 @@
 // Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.2 
 // Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
-// Generato il: 2020.11.29 alle 11:00:27 PM CET 
+// Generato il: 2020.11.30 alle 05:35:21 PM CET 
 //
 
 
 package umanasoap.webservice;
 
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
 
 
 /**
@@ -28,12 +31,21 @@ import javax.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetCourseListRequest_QNAME = new QName("http://umanasoap/webservice", "getCourseListRequest");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: umanasoap.webservice
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link GetCourseListResponse }
+     * 
+     */
+    public GetCourseListResponse createGetCourseListResponse() {
+        return new GetCourseListResponse();
     }
 
     /**
@@ -58,6 +70,51 @@ public class ObjectFactory {
      */
     public Candidate createCandidate() {
         return new Candidate();
+    }
+
+    /**
+     * Create an instance of {@link GetCourseRequest }
+     * 
+     */
+    public GetCourseRequest createGetCourseRequest() {
+        return new GetCourseRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetCourseResponse }
+     * 
+     */
+    public GetCourseResponse createGetCourseResponse() {
+        return new GetCourseResponse();
+    }
+
+    /**
+     * Create an instance of {@link Course }
+     * 
+     */
+    public Course createCourse() {
+        return new Course();
+    }
+
+    /**
+     * Create an instance of {@link GetCourseListResponse.Courses }
+     * 
+     */
+    public GetCourseListResponse.Courses createGetCourseListResponseCourses() {
+        return new GetCourseListResponse.Courses();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://umanasoap/webservice", name = "getCourseListRequest")
+    public JAXBElement<Object> createGetCourseListRequest(Object value) {
+        return new JAXBElement<Object>(_GetCourseListRequest_QNAME, Object.class, null, value);
     }
 
 }
